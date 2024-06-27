@@ -1,0 +1,208 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: #d5bed4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  height: 100vh;
+}
+
+.container {
+  border: 1px solid black;
+  margin-top: 0;
+
+  position: relative;
+
+  -webkit-animation: heartBeat 1s ease infinite 0s;
+  -moz-animation: heartBeat 1s ease infinite 0s;
+  -o-animation: heartBeat 1s ease infinite 0s;
+  -ms-animation: heartBeat 1s ease infinite 0s;
+  animation: heartBeat 1s ease infinite 0s;
+}
+
+.heart {
+
+  position: absolute;
+  bottom: 20px;
+  right: -50px;
+  width: 100px;
+  height: 100px;
+  background-color: #fb8ea0;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.heart:before,
+.heart:after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  border-radius: 100px;
+  background-color: #fb8ea0;
+}
+
+.heart:before {
+  left: -50px;
+  top: 0;
+}
+
+.heart:after {
+  right: 0;
+  top: -50px
+}
+
+.main {
+  background-color: #f3e2e5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: #fb8ea0 2px solid;
+  border-radius: 5px;
+  width: 500px;
+  height: 250px;
+  padding: 10px;
+  text-align: center;
+}
+
+.main h3 {
+  color: #f38194;
+}
+
+#name1, #name2 {
+  width:80%;
+  align-self: center;
+  padding: 2px;
+  margin-bottom: 10px;
+
+}
+
+label {
+  color: #f38194;
+}
+
+button {
+  width: 30%;
+  align-self: center;
+
+  margin-top: 20px;
+  margin-bottom: 30px;
+  border: #f38194 2px solid;
+  border-radius: 5px;
+  background-color: #f38194;
+  padding: 3px;
+  color: white;
+  cursor: pointer;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 18px;
+}
+
+#result {
+  margin-top: 10px;
+  color: #f38194;
+  display: none;
+}
+
+@-webkit-keyframes heartBeat {
+  0% {
+    zoom: 100%;
+  }
+
+  15% {
+    zoom: 120%;
+  }
+
+  25% {
+    zoom: 110%;
+  }
+
+  35% {
+    zoom: 120%;
+  }
+
+  100% {
+    zoom: 100%;
+  }
+}
+
+/*tested on opera 12*/
+@-o-keyframes heartBeat {
+  0% {
+    zoom: 100%;
+  }
+
+  15% {
+    zoom: 120%;
+  }
+
+  25% {
+    zoom: 110%;
+  }
+
+  35% {
+    zoom: 120%;
+  }
+
+  100% {
+    zoom: 100%;
+  }
+}
+
+/*
+tested on IE9, should work but doesn't :(
+https://developer.mozilla.org/en-US/docs/CSS/transform
+*/
+@-ms-keyframes heartBeat {
+  0% {
+    transform: scale(1);
+  }
+
+  15% {
+    transform: scale(1.2);
+  }
+
+  25% {
+    transform: scale(1.1);
+  }
+
+  35% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/*tested on FF 18*/
+@keyframes heartBeat {
+  0% {
+    transform: scale(1);
+  }
+
+  15% {
+    transform: scale(1.2);
+  }
+
+  25% {
+    transform: scale(1.1);
+  }
+
+  35% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

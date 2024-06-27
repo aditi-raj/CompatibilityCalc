@@ -4,7 +4,7 @@ function calculateLove() {
 
   if (name1 == '' || name2 == '') {
     alert('Please enter both names.')
-  } 
+  }
   else {
     const per = Math.floor(Math.random() * 101);
     const res = document.getElementById('result');
@@ -13,7 +13,7 @@ function calculateLove() {
     if (per < 40) {
       res.innerHTML += 'You are not compatible at all.';
     }
-    else if (40 <= per && per< 80) {
+    else if (40 <= per && per < 80) {
       res.innerHTML += 'Give it a try.';
     } else {
       res.innerHTML += 'You are made for each other. Great Match';

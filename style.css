@@ -78,8 +78,9 @@ body {
   color: #f38194;
 }
 
-#name1, #name2 {
-  width:80%;
+#name1,
+#name2 {
+  width: 80%;
   align-self: center;
   padding: 2px;
   margin-bottom: 10px;
